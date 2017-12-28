@@ -22,8 +22,8 @@ public class App {
         MuServer server = httpServer()
             .withHttpConnection(Integer.parseInt(settings.getOrDefault("APP_PORT", String.valueOf(8710))))
             .addHandler(Method.GET, "/cathub/current-time", (request, response) -> {
-                response.contentType(ContentTypes.TEXT_PLAIN);
-                response.write("The time is " + Instant.now());
+                response.contentType(ContentTypes.TEXT_HTML);
+                response.write("<b>The time is</b> " + Instant.now());
                 return true;
             })
             .addHandler(ResourceHandler.fileOrClasspath("src/main/resources/web", "/web").withPathToServeFrom("/cathub").build())
