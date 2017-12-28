@@ -10,7 +10,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jetty.version>9.3.14.v20161028</jetty.version>
     </properties>
 
     <dependencies>
@@ -26,16 +25,10 @@
             <scope>runtime</scope>
         </dependency>
 
-
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-            <version>${jetty.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-util</artifactId>
-            <version>${jetty.version}</version>
+            <groupId>com.danielflower.ronin.muserver</groupId>
+            <artifactId>mu-server</artifactId>
+            <version>0.0.5</version>
         </dependency>
 
     </dependencies>
