@@ -29,6 +29,8 @@ public class App {
             .addHandler(ResourceHandler.fileOrClasspath("src/main/resources/web", "/web").withPathToServeFrom("/cathub").build())
             .start();
 
+        server.stop();
+
         log.info("Started at " + server.uri().resolve("/" + appName + "/"));
     }
 
